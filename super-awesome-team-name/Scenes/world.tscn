@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c5psahj04shht"]
+
+[ext_resource type="PackedScene" uid="uid://k1os6vf25ycf" path="res://Common/Players/player.tscn" id="1_a02cp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a02cp"]
+size = Vector2(1066, 13)
+
+[node name="world" type="Node2D" unique_id=581853797]
+
+[node name="Player" parent="." unique_id=486696495 instance=ExtResource("1_a02cp")]
+position = Vector2(41, 13)
+playerId = 1
+
+[node name="Player2" parent="." unique_id=1982669054 instance=ExtResource("1_a02cp")]
+position = Vector2(402, 1)
+playerId = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2121831649]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=686852786]
+position = Vector2(269, 186)
+shape = SubResource("RectangleShape2D_a02cp")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=179449008]
+position = Vector2(317, 113)

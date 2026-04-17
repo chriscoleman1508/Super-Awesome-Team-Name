@@ -7,3 +7,5 @@ res://Common/Players/player.tscn
 res://Common/Players/player.gd
 res://Scenes/title.gd
 res://Scenes/title.tscn
+res://Common/loading_screen.tscn
+res://Common/transition.gdshader

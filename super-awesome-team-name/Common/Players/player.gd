@@ -5,6 +5,12 @@ const JUMP_VELOCITY = -400.0
 
 @export var playerId : int
 
+func _ready() -> void:
+	if playerId == 1:
+		$Sprite2D.modulate = "ffff00"
+	else:
+		$Sprite2D.modulate = "ffffff"
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():

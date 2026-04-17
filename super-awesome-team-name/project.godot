@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SuperAwesomeTeamName"
-run/main_scene="uid://c5psahj04shht"
+run/main_scene="uid://4vmv5joypdld"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 

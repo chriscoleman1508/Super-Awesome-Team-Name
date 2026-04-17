@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bgf6ulh6r2xf"]
+
+[ext_resource type="Texture2D" uid="uid://dopk0e6milevu" path="res://icon.svg" id="1_ru0lq"]
+[ext_resource type="Script" uid="uid://bvauoiv1upm7t" path="res://Common/Objects/floor_button.gd" id="1_ukfpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukfpe"]
+size = Vector2(58, 42)
+
+[node name="FloorButton" type="Area2D" unique_id=285705548]
+script = ExtResource("1_ukfpe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=288359070]
+position = Vector2(0, -18)
+shape = SubResource("RectangleShape2D_ukfpe")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=873239606]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(0.46875, 0.0625)
+texture = ExtResource("1_ru0lq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

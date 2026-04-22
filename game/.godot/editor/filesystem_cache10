@@ -4,7 +4,8 @@ cave.webp::CompressedTexture2D::6383049453513382896::1776873746::1776873766::1::
 icon.svg::CompressedTexture2D::8173523601636631174::1776873746::1776873765::1::::<><><>0<>0<>50deaa564569c8099532e66f92920a7c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 wall.jpg::CompressedTexture2D::1593095198458262565::1776873746::1776873766::1::::<><><>0<>0<>ac2e110281e13399a98cdded58d104a9<>res://.godot/imported/wall.jpg-8ed0d7df155526a983718de180132827.ctex::
 ::res://assets/::1776873746
-::res://assets/characters/::1776873887
+::res://assets/characters/::1776876057
+pixil-frame-0 (16).png::CompressedTexture2D::5626249336693832008::1776876057::1776876067::1::::<><><>0<>0<>b6474e8f969e19158bcece140943f66b<>res://.godot/imported/pixil-frame-0 (16).png-5a8cc851d443c1694ed306b7b3875b04.ctex::
 player1.png::CompressedTexture2D::43477163283964090::1776873746::1776873886::1::::<><><>0<>0<>449014c7a82e769e6ba8c31d8141136c<>res://.godot/imported/player1.png-ee8028d83ec303abd746d696e961d2e5.ctex::
 ::res://assets/scenes/::1776875960
 lvl1.png::CompressedTexture2D::3714409573359456878::1776875947::1776875960::1::::<><><>0<>0<>53d87e692d2de7f1104352b593a57ba7<>res://.godot/imported/lvl1.png-bae5ecd0fa11107a14950ca3649985c5.ctex::
@@ -26,6 +27,6 @@ player.tscn::PackedScene::756446101104108969::1776874344::0::1::::<><><>0<>0<><>
 button_effect.gd::GDScript::4815684008418578664::1776873746::0::1::::ButtonEffect<>Node<><>0<>0<><>::
 title.gd::GDScript::7755721502497443874::1776873746::0::1::::<>CanvasLayer<><>0<>0<><>::
 title.tscn::PackedScene::2079596094195900285::1776873746::0::1::::<><><>0<>0<><>::uid://diq6unvhym1q1::::res://Scenes/title.gd<>uid://cau0u2rs75lj1::::res://Scenes/button_effect.gd<>uid://cw685lcgm2eh1::::res://cave.webp
-::res://Scenes/Levels/::1776875887
+::res://Scenes/Levels/::1776876001
 level_1.gd::GDScript::6390853241732615380::1776874367::0::1::::<>Node2D<><>0<>0<><>::
-level_1.tscn::PackedScene::1357872676974920449::1776875887::0::1::::<><><>0<>0<><>::uid://cxb1oitj76xmi::::res://Scenes/Levels/level_1.gd<>uid://dopk0e6milevu::::res://icon.svg<>uid://bgf6ulh6r2xf::::res://Common/Objects/floor_button.tscn<>uid://k1os6vf25ycf::::res://Common/Players/player.tscn<>uid://byoadec2ynue::::res://Common/Objects/death_barrier.tscn<>uid://bllh5dv23q38h::::res://Common/camera_2d.gd
+level_1.tscn::PackedScene::1357872676974920449::1776876001::0::1::::<><><>0<>0<><>::uid://cxb1oitj76xmi::::res://Scenes/Levels/level_1.gd<>uid://dopk0e6milevu::::res://icon.svg<>uid://bgf6ulh6r2xf::::res://Common/Objects/floor_button.tscn<>uid://bs6j1vexlflak::::res://assets/scenes/lvl1.png<>uid://k1os6vf25ycf::::res://Common/Players/player.tscn<>uid://byoadec2ynue::::res://Common/Objects/death_barrier.tscn<>uid://bllh5dv23q38h::::res://Common/camera_2d.gd

@@ -1,0 +1,45 @@
+body{
+    background-color: midnightblue;
+    text-align: center;
+    padding: none;
+    border: none;
+}
+
+.playwrite-nz-guides-regular {
+    font-family: "Playwrite NZ Guides", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  h1{
+    color: aliceblue;
+    font-family: "Playwrite NZ Guides", cursive;
+    font-weight: 400;
+    font-style: normal;
+    background-image: url(https://www.starregistry.com/wp-content/uploads/2024/04/3-resized.jpg);
+    padding: 10%;
+    border-color: aliceblue;
+  }
+p{
+     color: rgb(255, 255, 255);
+     font-family: "Playwrite NZ Guides", cursive;
+     font-size: larger;
+  
+}
+.ParvumProtectors{
+    border:solid;
+    border-color: rgb(13, 13, 66);
+}
+header{
+    background-color: rgb(158, 158, 224);
+}
+h2{
+  color: rgb(255, 255, 255);
+  font-family: "Playwrite NZ Guides", cursive;
+  font-size: larger;
+}
+h6{
+  color: rgb(255, 255, 255);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}

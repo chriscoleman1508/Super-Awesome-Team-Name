@@ -5,9 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://bgf6ulh6r2xf" path="res://Common/Objects/floor_button.tscn" id="2_4dpyx"]
 [ext_resource type="PackedScene" uid="uid://k1os6vf25ycf" path="res://Common/Players/player.tscn" id="3_3mqfk"]
 [ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://cave.webp" id="5_cyadu"]
+[ext_resource type="PackedScene" uid="uid://byoadec2ynue" path="res://Common/Objects/death_barrier.tscn" id="6_xgxfi"]
+[ext_resource type="Script" uid="uid://bllh5dv23q38h" path="res://Common/camera_2d.gd" id="7_5f3p6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dpyx"]
-size = Vector2(1066, 13)
+size = Vector2(490, 13)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5f3p6"]
 
 [node name="Level1" type="Node2D" unique_id=1326156231]
 script = ExtResource("1_iixi8")
@@ -16,31 +20,28 @@ script = ExtResource("1_iixi8")
 position = Vector2(306, 352)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=176125012]
-position = Vector2(269, 186)
+position = Vector2(-19, 186)
 shape = SubResource("RectangleShape2D_4dpyx")
 
 [node name="Icon" type="Sprite2D" parent="floor" unique_id=1970649735]
-position = Vector2(269.99997, 187)
-scale = Vector2(8.359375, 0.12499992)
+position = Vector2(-20.00003, 187)
+scale = Vector2(3.828125, 0.12499992)
 texture = ExtResource("1_tlcug")
 
-[node name="floor2" type="StaticBody2D" parent="." unique_id=177818220]
-position = Vector2(970, 235)
+[node name="floor2" type="StaticBody2D" parent="." unique_id=1889764879]
+position = Vector2(927, 352)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2" unique_id=661879829]
-position = Vector2(269, 186)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor2" unique_id=1428212701]
+position = Vector2(-19, 186)
 shape = SubResource("RectangleShape2D_4dpyx")
 
-[node name="Icon" type="Sprite2D" parent="floor2" unique_id=136785449]
-position = Vector2(269.99997, 187)
-scale = Vector2(8.359375, 0.12499992)
+[node name="Icon" type="Sprite2D" parent="floor2" unique_id=1587539670]
+position = Vector2(-20.00003, 187)
+scale = Vector2(3.828125, 0.12499992)
 texture = ExtResource("1_tlcug")
 
 [node name="FloorButton" parent="." unique_id=285705548 instance=ExtResource("2_4dpyx")]
 position = Vector2(1053, 530)
-
-[node name="FloorButton2" parent="." unique_id=58359538 instance=ExtResource("2_4dpyx")]
-position = Vector2(1053, 412)
 
 [node name="Player" parent="." unique_id=486696495 instance=ExtResource("3_3mqfk")]
 position = Vector2(108, 484)
@@ -84,3 +85,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_cyadu")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=2107941843]
+position = Vector2(202, 414)
+
+[node name="DeathBarrier" parent="." unique_id=390880717 instance=ExtResource("6_xgxfi")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBarrier" unique_id=1181622752]
+position = Vector2(0, 637)
+shape = SubResource("WorldBoundaryShape2D_5f3p6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=991996423 node_paths=PackedStringArray("player1", "player2")]
+script = ExtResource("7_5f3p6")
+player1 = NodePath("../Player")
+player2 = NodePath("../Player2")

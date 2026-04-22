@@ -1,2 +1,8 @@
-res://Scenes/title.tscn
+res://Common/Players/player.tscn
 res://Common/transition.gdshader
+res://Scenes/Levels/level_1.tscn
+res://Common/Objects/floor_button.gd
+res://Scenes/Levels/level_1.gd
+res://Common/Objects/death_barrier.gd
+res://Common/Players/player.gd
+res://Common/camera_2d.gd

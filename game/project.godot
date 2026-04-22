@@ -13,6 +13,7 @@ config_version=5
 config/name="SuperAwesomeTeamName"
 run/main_scene="uid://4vmv5joypdld"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/image="uid://ch3bxswwa3cc0"
 config/icon="res://icon.svg"
 
 [autoload]

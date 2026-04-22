@@ -5,6 +5,8 @@ const JUMP_VELOCITY = -400.0
 
 @export var playerId : int
 
+var spawn_point
+
 func _ready() -> void:
 	if playerId == 1:
 		$Sprite2D.modulate = "ffff00"

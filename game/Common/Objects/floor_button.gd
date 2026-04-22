@@ -1,10 +1,11 @@
 extends Area2D
-var playerOnButton : bool
+
+var playersOnButton = 0
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"): 
-		playerOnButton = true
+		playersOnButton += 1
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"): 
-		playerOnButton = false
+		playersOnButton -= 1

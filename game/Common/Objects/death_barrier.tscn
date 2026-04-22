@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://byoadec2ynue"]
+
+[ext_resource type="Script" uid="uid://ddkxxw5c23ei1" path="res://Common/Objects/death_barrier.gd" id="1_r6uqx"]
+
+[node name="DeathBarrier" type="Area2D" unique_id=390880717]
+script = ExtResource("1_r6uqx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

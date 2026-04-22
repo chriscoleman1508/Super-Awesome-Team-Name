@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cxb1oitj76xmi" path="res://Scenes/Levels/level_1.gd" id="1_iixi8"]
 [ext_resource type="Texture2D" uid="uid://dopk0e6milevu" path="res://icon.svg" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://bgf6ulh6r2xf" path="res://Common/Objects/floor_button.tscn" id="2_4dpyx"]
+[ext_resource type="Texture2D" uid="uid://bs6j1vexlflak" path="res://assets/scenes/lvl1.png" id="2_5f3p6"]
 [ext_resource type="PackedScene" uid="uid://k1os6vf25ycf" path="res://Common/Players/player.tscn" id="3_3mqfk"]
-[ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://cave.webp" id="5_cyadu"]
 [ext_resource type="PackedScene" uid="uid://byoadec2ynue" path="res://Common/Objects/death_barrier.tscn" id="6_xgxfi"]
 [ext_resource type="Script" uid="uid://bllh5dv23q38h" path="res://Common/camera_2d.gd" id="7_5f3p6"]
 
@@ -15,6 +15,11 @@ size = Vector2(490, 13)
 
 [node name="Level1" type="Node2D" unique_id=1326156231]
 script = ExtResource("1_iixi8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=583769006]
+position = Vector2(576.5, 370)
+scale = Vector2(3.83, 3.83)
+texture = ExtResource("2_5f3p6")
 
 [node name="floor" type="StaticBody2D" parent="." unique_id=955314549]
 position = Vector2(306, 352)
@@ -65,26 +70,6 @@ offset_right = 152.0
 offset_bottom = 447.0
 theme_override_font_sizes/font_size = 32
 text = "↑←↓→	"
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1334382992]
-layer = -1
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1556768025]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1033161291]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_cyadu")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=2107941843]
 position = Vector2(202, 414)

@@ -1,7 +1,10 @@
-AnimationPlayer
-ColorRect
+TextureRect
+TextEdit
 Control
 CanvasLayer
+Node
+AnimationPlayer
+ColorRect
 Label
 Button
 Camera2D

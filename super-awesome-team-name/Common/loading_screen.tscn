@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bbtdq4vygx2mx"]
 
 [ext_resource type="Shader" uid="uid://b3dg043ed5mqk" path="res://Common/transition.gdshader" id="1_fiq28"]
+[ext_resource type="Script" uid="uid://bft271kraekw7" path="res://Common/loading_screen.gd" id="1_gvksl"]
+[ext_resource type="Texture2D" uid="uid://wxybshe6txht" path="res://wall.jpg" id="3_h5me6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gvksl"]
 shader = ExtResource("1_fiq28")
@@ -27,18 +29,66 @@ shader_parameter/edges = 14
 shader_parameter/shape_feather = 0.0
 shader_parameter/sectors = 1
 shader_parameter/clock_feather = 0.0
-shader_parameter/progress = 0.0
+shader_parameter/progress = 3.0
 shader_parameter/progress_bias = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_gvksl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.0]
+}
 
 [sub_resource type="Animation" id="Animation_fiq28"]
 resource_name = "load_in"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [3.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_h5me6"]
+resource_name = "load_out"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/TextureRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.75),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 3.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gvksl"]
 _data = {
-&"load_in": SubResource("Animation_fiq28")
+&"RESET": SubResource("Animation_gvksl"),
+&"load_in": SubResource("Animation_fiq28"),
+&"load_out": SubResource("Animation_h5me6")
 }
 
 [node name="LoadingScreen" type="CanvasLayer" unique_id=523295769]
+layer = 100
+script = ExtResource("1_gvksl")
 
 [node name="Control" type="Control" parent="." unique_id=742191709]
 layout_mode = 3
@@ -48,7 +98,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Control" unique_id=870397329]
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1052741031]
 material = SubResource("ShaderMaterial_gvksl")
 layout_mode = 1
 anchors_preset = 15
@@ -56,6 +106,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("3_h5me6")
+expand_mode = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=920532626]
 libraries/ = SubResource("AnimationLibrary_gvksl")

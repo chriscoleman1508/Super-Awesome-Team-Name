@@ -1,11 +1,5 @@
-res://Scenes/world.tscn
-res://Scenes/Levels/level_1.tscn
-res://Common/Objects/floor_button.tscn
-res://Common/Objects/floor_button.gd
-res://Scenes/Levels/level_1.gd
-res://Common/Players/player.tscn
-res://Common/Players/player.gd
-res://Scenes/title.gd
 res://Scenes/title.tscn
-res://Common/loading_screen.tscn
 res://Common/transition.gdshader
+res://Scenes/button_effect.gd
+res://Common/loading_screen.tscn
+res://Scenes/Levels/level_1.tscn

@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://4vmv5joypdld"]
 
 [ext_resource type="Script" uid="uid://diq6unvhym1q1" path="res://Scenes/title.gd" id="1_w31pl"]
-[ext_resource type="Script" uid="uid://cau0u2rs75lj1" path="res://Scenes/button_effect.gd" id="2_ekrfg"]
-[ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://cave.webp" id="3_fp2oq"]
+[ext_resource type="Script" uid="uid://c4002mnhgntyp" path="res://Scenes/button.gd" id="2_ekrfg"]
 
 [node name="Title" type="CanvasLayer" unique_id=2006823196]
 script = ExtResource("1_w31pl")
@@ -40,30 +39,8 @@ offset_right = 4.0
 offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 64
+theme_override_font_sizes/font_size = 128
 text = "PLAY!!!!"
-
-[node name="Node" type="Node" parent="Control/Button" unique_id=2060690118]
 script = ExtResource("2_ekrfg")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=995078812]
-layer = -1
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1261826399]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1445239978]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_fp2oq")
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

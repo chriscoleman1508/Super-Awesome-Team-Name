@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dopk0e6milevu" path="res://icon.svg" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://bgf6ulh6r2xf" path="res://Common/Objects/floor_button.tscn" id="2_4dpyx"]
 [ext_resource type="PackedScene" uid="uid://k1os6vf25ycf" path="res://Common/Players/player.tscn" id="3_3mqfk"]
+[ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://cave.webp" id="5_cyadu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dpyx"]
 size = Vector2(1066, 13)
@@ -63,3 +64,23 @@ offset_right = 152.0
 offset_bottom = 447.0
 theme_override_font_sizes/font_size = 32
 text = "↑←↓→	"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1334382992]
+layer = -1
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1556768025]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1033161291]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_cyadu")

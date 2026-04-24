@@ -1,5 +1,7 @@
 extends Camera2D
 
+@export var dyniamicCamEnabled : bool
+
 @export var player1: Node2D
 @export var player2: Node2D
 
@@ -7,18 +9,17 @@ extends Camera2D
 @export var min_zoom: float = 0.5
 @export var max_zoom: float = 2.0
 
-
-
 func _process(_delta: float) -> void:
-	var p1 = player1.global_position
-	var p2 = player2.global_position
+	if dyniamicCamEnabled:
+		var p1 = player1.global_position
+		var p2 = player2.global_position
 
-	# 1. Update Position
-	var mid = (p1 + p2) / 2
-	global_position = mid
+		# 1. Update Position
+		var mid = (p1 + p2) / 2
+		global_position = mid
 
-	# 2. Optional: Dynamic Zoom
-	_update_zoom(p1, p2)
+		# 2. Optional: Dynamic Zoom
+		_update_zoom(p1, p2)
 
 func _update_zoom(p1: Vector2, p2: Vector2) -> void:
 	# Calculate the distance between players

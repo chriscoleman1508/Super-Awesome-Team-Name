@@ -10,6 +10,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dpyx"]
 size = Vector2(1148, 29.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xgxfi"]
+size = Vector2(11, 711)
+
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_5f3p6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xgxfi"]
@@ -30,6 +33,14 @@ position = Vector2(306, 439)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=176125012]
 position = Vector2(273, 194.25)
 shape = SubResource("RectangleShape2D_4dpyx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="floor" unique_id=1223782161]
+position = Vector2(-310.5, -93.5)
+shape = SubResource("RectangleShape2D_xgxfi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="floor" unique_id=1207356892]
+position = Vector2(852, -143)
+shape = SubResource("RectangleShape2D_xgxfi")
 
 [node name="FloorButton" parent="." unique_id=285705548 instance=ExtResource("2_4dpyx")]
 position = Vector2(1053, 615)

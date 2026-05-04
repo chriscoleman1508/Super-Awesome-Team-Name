@@ -1,0 +1,7 @@
+res://Common/transition.gdshader
+res://Scenes/Levels/level_2.tscn
+res://Scenes/Levels/level_2.gd
+res://Scenes/Levels/level_1.gd
+res://Scenes/Levels/level_1.tscn
+res://Common/loading_screen.tscn
+res://Common/loading_screen.gd

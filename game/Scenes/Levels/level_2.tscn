@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://cjpsgd6ya3qbt"]
+
+[ext_resource type="Script" uid="uid://bxp0njrd0fkqi" path="res://Scenes/Levels/level_2.gd" id="1_8qsmg"]
+[ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://cave.webp" id="1_ovj6s"]
+[ext_resource type="PackedScene" uid="uid://byoadec2ynue" path="res://Common/Objects/death_barrier.tscn" id="1_ucdhh"]
+[ext_resource type="Script" uid="uid://bllh5dv23q38h" path="res://Common/camera_2d.gd" id="2_oylv5"]
+[ext_resource type="PackedScene" uid="uid://k1os6vf25ycf" path="res://Common/Players/player.tscn" id="4_8qsmg"]
+[ext_resource type="PackedScene" uid="uid://bgf6ulh6r2xf" path="res://Common/Objects/floor_button.tscn" id="5_fphuk"]
+[ext_resource type="Texture2D" uid="uid://dhcnngp34y2q8" path="res://assets/characters/spiderbeetlebug/pixilart-drawing.png" id="7_fphuk"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ovj6s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fphuk"]
+radius = 30.0
+height = 156.0
+
+[sub_resource type="Animation" id="Animation_fphuk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pnnky"]
+resource_name = "go_up"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -472), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_blpqv"]
+_data = {
+&"RESET": SubResource("Animation_fphuk"),
+&"go_up": SubResource("Animation_pnnky")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fphuk"]
+size = Vector2(1148, 29.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnnky"]
+size = Vector2(11, 711)
+
+[node name="level_2" type="Node2D" unique_id=543403383]
+script = ExtResource("1_8qsmg")
+
+[node name="background" type="Sprite2D" parent="." unique_id=185325470]
+position = Vector2(577, 324.49988)
+scale = Vector2(1.1799592, 1.1800001)
+texture = ExtResource("1_ovj6s")
+
+[node name="FloorButton" parent="." unique_id=285705548 instance=ExtResource("5_fphuk")]
+position = Vector2(1053, 615)
+scale = Vector2(1.9604689, 1.9604689)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=252985084]
+position = Vector2(202, 414)
+
+[node name="DeathBarrier" parent="." unique_id=390880717 instance=ExtResource("1_ucdhh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBarrier" unique_id=1364172680]
+position = Vector2(0, 637)
+shape = SubResource("WorldBoundaryShape2D_ovj6s")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=695744000 node_paths=PackedStringArray("player1", "player2")]
+position = Vector2(578, 325)
+script = ExtResource("2_oylv5")
+player1 = NodePath("")
+player2 = NodePath("")
+
+[node name="Player" parent="." unique_id=486696495 instance=ExtResource("4_8qsmg")]
+position = Vector2(138, 559)
+
+[node name="Player2" parent="." unique_id=1640485449 instance=ExtResource("4_8qsmg")]
+position = Vector2(206, 560)
+playerId = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1392416364]
+
+[node name="spider" type="Sprite2D" parent="Area2D" unique_id=1008903701]
+position = Vector2(646.00006, 585)
+scale = Vector2(1.78, 1.78)
+texture = ExtResource("7_fphuk")
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D/spider" unique_id=1814101358]
+polygon = PackedVector2Array(-5.6180115, -371.9101, -3.9326172, -371.9101, -0.56185913, -43.82022, -2.8090515, -44.38202)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1559361551]
+position = Vector2(643, 571)
+shape = SubResource("CapsuleShape2D_fphuk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=13840991]
+libraries/ = SubResource("AnimationLibrary_blpqv")
+autoplay = &"go_up"
+
+[node name="floor" type="StaticBody2D" parent="." unique_id=361420603]
+position = Vector2(306, 439)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=98222297]
+position = Vector2(273, 194.25)
+shape = SubResource("RectangleShape2D_fphuk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="floor" unique_id=2090754177]
+position = Vector2(-310.5, -93.5)
+shape = SubResource("RectangleShape2D_pnnky")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="floor" unique_id=764569374]
+position = Vector2(852, -143)
+shape = SubResource("RectangleShape2D_pnnky")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

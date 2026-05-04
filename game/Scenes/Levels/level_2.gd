@@ -6,11 +6,10 @@ extends Node2D
 func _ready() -> void:
 	player.spawn_point = $Marker2D.global_position
 	player_2.spawn_point = $Marker2D.global_position
+	$FloorButton.levelComplete.connect(nextScene)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if $FloorButton.playersOnButton == 2:
-		LoadingScreen.load_scene("res://Scenes/title.tscn")
+func nextScene():
+	LoadingScreen.load_scene("res://Scenes/Levels/level_2.tscn")	
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):

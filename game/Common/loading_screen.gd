@@ -8,8 +8,8 @@ func load_scene(scene : String):
 		$Control.show()
 		$AnimationPlayer.play("load_in")
 		await get_tree().create_timer(1.5).timeout
-		$AnimationPlayer.play("RESET")
 		get_tree().change_scene_to_file(scene)
 		$AnimationPlayer.play("load_out")
 		await $AnimationPlayer.animation_finished
+		$AnimationPlayer.play("RESET")
 		$Control.hide()

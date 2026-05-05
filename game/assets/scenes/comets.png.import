@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cw685lcgm2eh1"
-path="res://.godot/imported/cave.webp-59b994874fe9e00c21575709516242d8.ctex"
+uid="uid://dsfuvfoi4qs2x"
+path="res://.godot/imported/comets.png-2649f0e081bc78f06bf6621778d21860.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cave.webp"
-dest_files=["res://.godot/imported/cave.webp-59b994874fe9e00c21575709516242d8.ctex"]
+source_file="res://assets/scenes/comets.png"
+dest_files=["res://.godot/imported/comets.png-2649f0e081bc78f06bf6621778d21860.ctex"]
 
 [params]
 

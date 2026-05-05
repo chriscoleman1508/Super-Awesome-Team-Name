@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://diq6unvhym1q1" path="res://Scenes/title.gd" id="1_w31pl"]
 [ext_resource type="Script" uid="uid://cau0u2rs75lj1" path="res://Scenes/button_effect.gd" id="2_ekrfg"]
-[ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://cave.webp" id="3_fp2oq"]
+[ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://assets/scenes/cave.webp" id="3_fp2oq"]
 
 [node name="Title" type="CanvasLayer" unique_id=2006823196]
 script = ExtResource("1_w31pl")

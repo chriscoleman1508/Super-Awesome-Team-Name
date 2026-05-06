@@ -116,11 +116,11 @@ position = Vector2(273, 194.25)
 shape = SubResource("RectangleShape2D_fphuk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="floor" unique_id=2090754177]
-position = Vector2(-310.5, -93.5)
+position = Vector2(-304, -93)
 shape = SubResource("RectangleShape2D_pnnky")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="floor" unique_id=764569374]
-position = Vector2(852, -143)
+position = Vector2(846, -142)
 shape = SubResource("RectangleShape2D_pnnky")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

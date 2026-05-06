@@ -1,5 +1,2 @@
-res://Scenes/title.tscn
-res://Common/transition.gdshader
 res://Scenes/Levels/level_2.tscn
-res://Common/loading_screen.tscn
-res://Scenes/Levels/level_2.gd
+res://Common/transition.gdshader

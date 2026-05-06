@@ -1,2 +1,5 @@
 res://Scenes/Levels/level_2.tscn
 res://Common/transition.gdshader
+res://Scenes/Levels/level_3.tscn
+res://Scenes/Levels/level_2.gd
+res://Common/Players/player.gd

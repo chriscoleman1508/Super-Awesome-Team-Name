@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+const SPEED = 450.0
+const JUMP_VELOCITY = -800.0
 
 @export var playerId : int
 
@@ -16,7 +16,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		velocity += (get_gravity() * 2) * delta
 
 	# Handle jump.
 	if playerId == 1:

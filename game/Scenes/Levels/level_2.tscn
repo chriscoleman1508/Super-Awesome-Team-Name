@@ -76,7 +76,7 @@ position = Vector2(202, 414)
 [node name="DeathBarrier" parent="." unique_id=390880717 instance=ExtResource("1_ucdhh")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBarrier" unique_id=1364172680]
-position = Vector2(0, 637)
+position = Vector2(0, 707)
 shape = SubResource("WorldBoundaryShape2D_ovj6s")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=695744000]
@@ -116,7 +116,7 @@ position = Vector2(273, 194.25)
 shape = SubResource("RectangleShape2D_fphuk")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="floor" unique_id=2090754177]
-position = Vector2(-304, -93)
+position = Vector2(-302, -128)
 shape = SubResource("RectangleShape2D_pnnky")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="floor" unique_id=764569374]

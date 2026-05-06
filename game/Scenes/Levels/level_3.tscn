@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://yp3msccaw6vo"]
+
+[ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://assets/scenes/cave.webp" id="1_yy6i0"]
+[ext_resource type="PackedScene" uid="uid://bgf6ulh6r2xf" path="res://Common/Objects/floor_button.tscn" id="2_167vu"]
+[ext_resource type="PackedScene" uid="uid://byoadec2ynue" path="res://Common/Objects/death_barrier.tscn" id="3_x1k1j"]
+[ext_resource type="Script" uid="uid://bllh5dv23q38h" path="res://Common/camera_2d.gd" id="4_4ahh4"]
+[ext_resource type="PackedScene" uid="uid://k1os6vf25ycf" path="res://Common/Players/player.tscn" id="5_dl55b"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sy7oa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rc141"]
+size = Vector2(1867.5, 99)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8dmpc"]
+size = Vector2(11, 711)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13yca"]
+size = Vector2(329, 170.875)
+
+[node name="level_3" type="Node2D" unique_id=959384935]
+
+[node name="background" type="Sprite2D" parent="." unique_id=1784442353]
+position = Vector2(577, 324.49988)
+scale = Vector2(1.1799592, 1.1800001)
+texture = ExtResource("1_yy6i0")
+
+[node name="FloorButton" parent="." unique_id=285705548 instance=ExtResource("2_167vu")]
+position = Vector2(1474, 816)
+scale = Vector2(1.9604689, 1.9604689)
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=775602462]
+position = Vector2(202, 414)
+
+[node name="DeathBarrier" parent="." unique_id=390880717 instance=ExtResource("3_x1k1j")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathBarrier" unique_id=1684552386]
+position = Vector2(0, 1305)
+shape = SubResource("WorldBoundaryShape2D_sy7oa")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1790867585 node_paths=PackedStringArray("player1", "player2")]
+position = Vector2(578, 325)
+script = ExtResource("4_4ahh4")
+dyniamicCamEnabled = true
+player1 = NodePath("../Player")
+player2 = NodePath("../Player2")
+
+[node name="Player" parent="." unique_id=486696495 instance=ExtResource("5_dl55b")]
+position = Vector2(138, 559)
+
+[node name="Player2" parent="." unique_id=187756612 instance=ExtResource("5_dl55b")]
+position = Vector2(206, 560)
+playerId = 1
+
+[node name="floor" type="StaticBody2D" parent="." unique_id=65282023]
+position = Vector2(306, 439)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="floor" unique_id=1996353978]
+position = Vector2(631.25, 438)
+shape = SubResource("RectangleShape2D_rc141")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="floor" unique_id=449364185]
+position = Vector2(-304, -93)
+shape = SubResource("RectangleShape2D_8dmpc")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="floor" unique_id=2019343955]
+position = Vector2(1455, -142)
+shape = SubResource("RectangleShape2D_8dmpc")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="floor" unique_id=25672257]
+position = Vector2(1393, 305)
+shape = SubResource("RectangleShape2D_13yca")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="floor" unique_id=1317345157]
+position = Vector2(944, 301)
+shape = SubResource("RectangleShape2D_13yca")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="floor" unique_id=875516959]
+position = Vector2(417, 301)
+shape = SubResource("RectangleShape2D_13yca")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor" unique_id=427302032]
+position = Vector2(-136, 304)
+shape = SubResource("RectangleShape2D_13yca")
+
+[node name="Polygon2D" type="Polygon2D" parent="floor/CollisionShape2D" unique_id=63501603]
+color = Color(0.27936915, 0.15245968, 0.07431684, 1)
+polygon = PackedVector2Array(-168, 83, 1705, 82, 1708, 188, -169, 188)
+
+[node name="Polygon2D" type="Polygon2D" parent="floor" unique_id=383658261]
+position = Vector2(18, 33)
+color = Color(0.21412197, 0.108363114, 0.00029939733, 1)
+polygon = PackedVector2Array(-319, 185, 10, 185, 9, 356, -318, 358)
+
+[node name="Polygon2D" type="Polygon2D" parent="floor/Polygon2D" unique_id=1221028899]
+position = Vector2(549, -3)
+color = Color(0.21412197, 0.108363114, 0.00029939733, 1)
+polygon = PackedVector2Array(-319, 185, 10, 185, 9, 356, -318, 358)
+
+[node name="Polygon2D" type="Polygon2D" parent="floor/Polygon2D/Polygon2D" unique_id=808072763]
+position = Vector2(528, -3)
+color = Color(0.21412197, 0.108363114, 0.00029939733, 1)
+polygon = PackedVector2Array(-319, 185, 10, 185, 9, 356, -318, 358)
+
+[node name="Polygon2D" type="Polygon2D" parent="floor/Polygon2D/Polygon2D/Polygon2D" unique_id=1053833579]
+position = Vector2(451, 4)
+color = Color(0.21412197, 0.108363114, 0.00029939733, 1)
+polygon = PackedVector2Array(-319, 185, 10, 185, 9, 356, -318, 358)

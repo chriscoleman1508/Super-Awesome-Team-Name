@@ -20,8 +20,8 @@ size = Vector2(329, 170.875)
 [node name="level_3" type="Node2D" unique_id=959384935]
 
 [node name="background" type="Sprite2D" parent="." unique_id=1784442353]
-position = Vector2(577, 324.49988)
-scale = Vector2(1.1799592, 1.1800001)
+position = Vector2(1041.3369, 468.87494)
+scale = Vector2(3.258523, 3.2586362)
 texture = ExtResource("1_yy6i0")
 
 [node name="FloorButton" parent="." unique_id=285705548 instance=ExtResource("2_167vu")]

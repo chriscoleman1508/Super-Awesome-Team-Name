@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://b3dg043ed5mqk" path="res://Common/transition.gdshader" id="1_fiq28"]
 [ext_resource type="Script" uid="uid://bft271kraekw7" path="res://Common/loading_screen.gd" id="1_gvksl"]
-[ext_resource type="Texture2D" uid="uid://crdkvs301kdfn" path="res://assets/pixil-frame-0 (1).png" id="3_h5me6"]
+[ext_resource type="Texture2D" uid="uid://blromgsr5odfm" path="res://assets/transition.png" id="3_h5me6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gvksl"]
 shader = ExtResource("1_fiq28")

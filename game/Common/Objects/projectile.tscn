@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b4b7pn6mo5eow"]
+
+[ext_resource type="Texture2D" uid="uid://bw6003blh1l2b" path="res://assets/characters/worm/pixil-frame-0.png" id="1_4thdf"]
+[ext_resource type="Script" uid="uid://cuwqdqspcexiv" path="res://Common/Objects/projectile.gd" id="1_jdokb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4thdf"]
+radius = 22.0
+
+[node name="projectile" type="Area2D" unique_id=1767399752]
+script = ExtResource("1_jdokb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2117851267]
+shape = SubResource("CircleShape2D_4thdf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1678626799]
+position = Vector2(-2, 7.000001)
+scale = Vector2(2.6599998, 2.6599998)
+texture = ExtResource("1_4thdf")
+flip_h = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -3,3 +3,9 @@ res://Common/transition.gdshader
 res://Scenes/Levels/level_3.tscn
 res://Scenes/Levels/level_2.gd
 res://Common/Players/player.gd
+res://animated_sprite_2d.gd
+res://Common/worm.tscn
+res://Common/Objects/projectile.tscn
+res://Common/Objects/projectile.gd
+res://Common/loading_screen.tscn
+res://Scenes/Levels/level_3.gd

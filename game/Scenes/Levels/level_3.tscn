@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://yp3msccaw6vo"]
 
+[ext_resource type="Script" uid="uid://calxhcoxwhyin" path="res://Scenes/Levels/level_3.gd" id="1_167vu"]
 [ext_resource type="Texture2D" uid="uid://cw685lcgm2eh1" path="res://assets/scenes/cave.webp" id="1_yy6i0"]
 [ext_resource type="PackedScene" uid="uid://bgf6ulh6r2xf" path="res://Common/Objects/floor_button.tscn" id="2_167vu"]
 [ext_resource type="PackedScene" uid="uid://byoadec2ynue" path="res://Common/Objects/death_barrier.tscn" id="3_x1k1j"]
 [ext_resource type="Script" uid="uid://bllh5dv23q38h" path="res://Common/camera_2d.gd" id="4_4ahh4"]
 [ext_resource type="PackedScene" uid="uid://k1os6vf25ycf" path="res://Common/Players/player.tscn" id="5_dl55b"]
+[ext_resource type="PackedScene" uid="uid://basvfxpnsqlav" path="res://Common/worm.tscn" id="6_yy6i0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sy7oa"]
 
@@ -18,6 +20,7 @@ size = Vector2(11, 711)
 size = Vector2(329, 170.875)
 
 [node name="level_3" type="Node2D" unique_id=959384935]
+script = ExtResource("1_167vu")
 
 [node name="background" type="Sprite2D" parent="." unique_id=1784442353]
 position = Vector2(1041.3369, 468.87494)
@@ -63,7 +66,7 @@ position = Vector2(-304, -93)
 shape = SubResource("RectangleShape2D_8dmpc")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="floor" unique_id=2019343955]
-position = Vector2(1455, -142)
+position = Vector2(1228, -129)
 shape = SubResource("RectangleShape2D_8dmpc")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="floor" unique_id=25672257]
@@ -101,7 +104,9 @@ position = Vector2(528, -3)
 color = Color(0.21412197, 0.108363114, 0.00029939733, 1)
 polygon = PackedVector2Array(-319, 185, 10, 185, 9, 356, -318, 358)
 
-[node name="Polygon2D" type="Polygon2D" parent="floor/Polygon2D/Polygon2D/Polygon2D" unique_id=1053833579]
-position = Vector2(451, 4)
-color = Color(0.21412197, 0.108363114, 0.00029939733, 1)
-polygon = PackedVector2Array(-319, 185, 10, 185, 9, 356, -318, 358)
+[node name="worm" parent="." unique_id=496857075 instance=ExtResource("6_yy6i0")]
+position = Vector2(1680.25, 685.75)
+scale = Vector2(2.9549997, 2.695)
+frame_progress = 0.0
+
+[connection signal="body_entered" from="DeathBarrier" to="." method="_on_area_2d_body_entered"]
